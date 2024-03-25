@@ -104,12 +104,13 @@ public class notas {
 	     * Este metodo calcula la nota definitiva
 	     */
 		public void Calculonotas() {
-			acu1= uf1*0.35;
-			acu2 = uf2 * 0.35;
-			acu3 = uf3 * 0.30;
+			acu1= uf1*0.175;
+			acu2 = uf2 * 0.175;
+			acu3 = uf3 * 0.15;
 			
 			def = acu1 + acu2+ acu3;
-			
+			//cambio la formula para auqe calcule la nota sobre 20
+			//antes la calculaba sobre 10
 			//hasta aqui la tenemos calculada peor no la mostramos
 		}
 		/**

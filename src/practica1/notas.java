@@ -17,15 +17,15 @@ public class notas {
 	/**
      * Nota de la primera unidad formativa uno 
      */
-    double uf1;
+    double uni1;
     /**
      * Nota de la segunda unidad formativa dos 
      */
-    double uf2;
+    double uni2;
     /**
      * Nota de la tercera unidad formativa tres 
      */
-    double uf3;
+    double uni3;
     /**
      * Acumulado de la primera unidad formativa uno
      */
@@ -55,16 +55,16 @@ public class notas {
 			
 			System.out.print("ingrese nota 1: ");
 			
-			uf1= entrada.nextDouble();
+			uni1= entrada.nextDouble();
 
 			
 			
 			System.out.print("ingrese nota 2: ");
 			
-			uf2= entrada.nextDouble();
+			uni2= entrada.nextDouble();
 			System.out.print("ingrese nota 3: ");
 			
-			uf3= entrada.nextDouble();
+			uni3= entrada.nextDouble();
 			
 		
 		}
@@ -75,20 +75,20 @@ public class notas {
 	     */
 		public void comprobarcion(){
 			
-			if (uf1>10) {
+			if (uni1>10) {
 				System.out.println(" nota1 mal introducida");
 				
 			}else {
 				System.out.println(" nota1 correcta");
 			}
 			
-			if (uf2>10) {
+			if (uni2>10) {
 				System.out.println(" nota2 mal introducida");
 				
 			}else {
 				System.out.println(" nota2 correcta");
 			}
-			if (uf3>10) {
+			if (uni3>10) {
 				System.out.println(" nota3 mal introducida");
 				
 			}else {
@@ -104,9 +104,9 @@ public class notas {
 	     * Este metodo calcula la nota definitiva
 	     */
 		public void Calculonotas() {
-			acu1= uf1*0.175;
-			acu2 = uf2 * 0.175;
-			acu3 = uf3 * 0.15;
+			acu1= uni1*0.7;
+			acu2 = uni2 * 0.7;
+			acu3 = uni3 * 0.6;
 			
 			def = acu1 + acu2+ acu3;
 			//cambio la formula para auqe calcule la nota sobre 20
@@ -119,17 +119,17 @@ public class notas {
 		public void Mostrar() {
 			//print ln lo que hace es que al terminar el print baja la linea
 			System.out.println(" notas introducidas son:");
-			System.out.println(" nota1 = " + uf1);
-			System.out.println(" nota2 = " + uf2);
-			System.out.println(" nota3 = " + uf3);
+			System.out.println(" nota1 = " + uni1);
+			System.out.println(" nota2 = " + uni2);
+			System.out.println(" nota3 = " + uni3);
 			
 			System.out.println(" acumuado 1 = "+ acu1);
 			System.out.println(" acumuado 2 = "+ acu2);
 			System.out.println(" acumuado 3 = "+ acu3);
 			
-			System.out.println(" nota definitiva es = "+ def+2);
+			System.out.println(" nota definitiva es = "+ def);
 			System.out.println(" NOTA ACTUALIZADA SOBRE 20 ");
-			System.out.println(" POR ERROR EN EL EXAMEN SE SUMAN DOS PUNTOS A LA NOTA ");
+			
 			
 		}
 		/**
@@ -137,10 +137,10 @@ public class notas {
 	     */
 		public void aprobado() {
 				
-				if(def<5 && def>=0) {
+				if(def<10 && def>=0) {
 					System.out.println("suspendio");
 				}else {
-					if (def>=5 && def<=10 ) {
+					if (def>=10 && def<=20 ) {
 					System.out.println("aprobado");
 					}else {
 						System.out.println(" error en la notas");
